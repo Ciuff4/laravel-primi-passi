@@ -14,5 +14,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home');
+    $nav=[
+        'Menu',
+        'Chi siamo',
+        'Prodotti',
+        'News',
+        'Contatti',
+
+    ];
+    return view('home', ['nav'=>$nav]);
 });
